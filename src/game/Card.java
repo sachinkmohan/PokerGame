@@ -30,15 +30,13 @@ public class Card {
     }
 
     public int isAPair(List<Card> hand) {
-
-        for(int i=0; i<hand.size(); i++){
-            if(i+1 == hand.size()) {
-                break;
-            }
-            else if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
+        int i = 0;
+        while(i+1 != hand.size()){
+            if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
                 ranking = 9;
-
             }
+            else {ranking = 11;}
+            i++;
         }
 
         return ranking;
