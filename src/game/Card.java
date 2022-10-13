@@ -3,7 +3,7 @@ package game;
 import java.util.List;
 
 public class Card {
-
+    int ranking;
     public final String suit;
     public final String value;
 
@@ -29,14 +29,18 @@ public class Card {
         return value + " of " +suit;
     }
 
-    public String isAPair(List<Card> hand) {
+    public int isAPair(List<Card> hand) {
 
-        for(int i=0; i<5; i++){
-            if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
-                return "Pair found";
+        for(int i=0; i<hand.size(); i++){
+            if(i+1 == hand.size()) {
+                break;
+            }
+            else if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
+                ranking = 9;
+
             }
         }
 
-        return null;
+        return ranking;
     }
 }

@@ -14,8 +14,10 @@ public class PokerMain {
         //System.out.println("Printing HAND1 -> " +HAND1.get(1).getValue());
 
        Card check = new Card("Clubs", "2");
-       String s = check.isAPair(HAND1);
+       int s = check.isAPair(HAND1);
        System.out.println(s);
+
+       //int[] rankCompare = { 0, 0};
 
     }
 }
