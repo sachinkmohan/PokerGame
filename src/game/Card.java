@@ -1,5 +1,7 @@
 package game;
 
+import java.util.List;
+
 public class Card {
 
     public final String suit;
@@ -15,7 +17,26 @@ public class Card {
         this.value = value;
     }
 
+    public String getSuit(){
+        return suit;
+    }
+
+    public String getValue(){
+        return value;
+    }
+
     public String toString(){
         return value + " of " +suit;
+    }
+
+    public String isAPair(List<Card> hand) {
+
+        for(int i=0; i<5; i++){
+            if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
+                return "Pair found";
+            }
+        }
+
+        return null;
     }
 }
