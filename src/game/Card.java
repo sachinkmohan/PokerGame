@@ -41,4 +41,8 @@ public class Card {
 
         return ranking;
     }
+
+    public int isTwoPair(List<Card> hand){
+        return 0;
+    }
 }
