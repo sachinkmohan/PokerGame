@@ -1,7 +1,9 @@
 package game;
 
-public class Card {
+import java.util.List;
 
+public class Card {
+    int ranking;
     public final String suit;
     public final String value;
 
@@ -15,7 +17,28 @@ public class Card {
         this.value = value;
     }
 
+    public String getSuit(){
+        return suit;
+    }
+
+    public String getValue(){
+        return value;
+    }
+
     public String toString(){
         return value + " of " +suit;
+    }
+
+    public int isAPair(List<Card> hand) {
+        int i = 0;
+        while(i+1 != hand.size()){
+            if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
+                ranking = 9;
+            }
+            else {ranking = 11;}
+            i++;
+        }
+
+        return ranking;
     }
 }
