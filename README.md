@@ -9,6 +9,7 @@
 This Poker game tests 2 functionalities
   - A pair of card between 2 hands defined by `isAPair()` in `Card.java`
   - Two pair of cards between 2 hands defined by `isTwoPair()` in `Card.java`
+  - A function to test 2 pair of hands is defined by `testisAPair()` in `PokerMain.java`
   
  
  ### Execution
