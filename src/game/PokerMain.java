@@ -1,3 +1,7 @@
+/* Author - Sachin K Mohan */
+/* Title - PokerMain.java */
+/* Description - Main Program to test the Poker rankings between 2 hands */
+
 package game;
 
 import java.util.List;
@@ -8,10 +12,7 @@ public class PokerMain {
     private static final List<Card> HAND2 = List.of(new Card("Clubs", "2"), new Card("Spades", "3"));
     private static int[] rankCompare = { 11, 11}; // Intializing to a higher value to do the comparison
     public static void main(String[] args) {
-
-        testisAPair();
-
-
+        testisAPair(); // to test a pair functionality for the 2 hands
     }
 
     private static void testisAPair() {

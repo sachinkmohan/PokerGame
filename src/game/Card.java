@@ -1,3 +1,8 @@
+/* Author - Sachin K Mohan */
+/* Title - Card.java */
+/* Description - Card variables like card value, suits are defined. All the rankings to compare for the 2 hands are
+* implemented here */
+
 package game;
 
 import java.util.List;
@@ -34,6 +39,7 @@ public class Card {
         while(i+1 != hand.size()){
             if(hand.get(i).getValue().equals(hand.get(i+1).getValue())){
                 ranking = 9;
+                break;
             }
             else {ranking = 11;}
             i++;
@@ -43,6 +49,16 @@ public class Card {
     }
 
     public int isTwoPair(List<Card> hand){
-        return 0;
+        int i = 0;
+        while(i+1 != hand.size()){
+            if(hand.get(i).getValue().equals(hand.get(i+1).getValue()) && hand.get(i+2).getValue().equals(hand.get(i+3).getValue())){
+                ranking = 8;
+                break;
+            }
+            else {ranking = 11;}
+            i++;
+        }
+
+        return ranking;
     }
 }
